@@ -25,11 +25,6 @@ async def get_report(
         session: AsyncSession = Depends(get_async_session),
         wrapper_services: Aiogoogle = Depends(get_service)
 ):
-    """Только для суперюзеров.
-       Создание отчёта в Google таблицах.
-       В отчёте: закрытые проекты, отсортированные по времени, затраченному на
-       сборы средств.
-    """
     charity_projects = await (
         charity_project_crud.get_projects_by_completion_rate(session)
     )
