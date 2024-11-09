@@ -9,16 +9,16 @@
 ```source venv/Scripts/activate```
 
 # Linux
-python3 -m venv venv
-source venv/bin/activate
+```python3 -m venv venv```
+```source venv/bin/activate```
 Обновить менеджер пакетов pip
-$ python -m pip install --upgrade pip
+```$ python -m pip install --upgrade pip```
 Установить зависимости из requirements.txt
-$ pip install -r requirements.txt
+```$ pip install -r requirements.txt```
 Создать файл .env с переменными окружения. Пример наполнения:
-DATABASE_URL=sqlite+aiosqlite:///./db.sqlite
-SECRET=secret
+```DATABASE_URL=sqlite+aiosqlite:///./db.sqlite```
+```SECRET=secret```
 Создать базу данных
-$ alembic upgrade head
+```$ alembic upgrade head```
 Запустить приложение
-$ uvicorn app.main:app
+```$ uvicorn app.main:app```
