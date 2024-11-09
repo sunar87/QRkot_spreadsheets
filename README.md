@@ -1,9 +1,9 @@
 # QRkot_spreadseets
 Как развернуть проект на компьютере:
 Клонировать репозиторий c GitHub на компьютер и перейти в него в командной строке
-$ git clone https://github.com/sunar87/QRkot.git
-$ cd QRkot
-Создать и активировать виртуальное окружение
+'''$ git clone https://github.com/sunar87/QRkot.git'''
+cd QRkot
+Создать и активировать виртуальное окружение:
 # Windows
 $ python -m venv venv
 $ source venv/Scripts/activate
