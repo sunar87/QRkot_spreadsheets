@@ -9,7 +9,6 @@ from app.schemas.donation import (DonationCreate, DonationDB,
                                   DonationDBSuperUser)
 from app.services.investing import investation
 
-
 router = APIRouter()
 
 
@@ -24,9 +23,8 @@ async def create_donation(
         session: AsyncSession = Depends(get_async_session),
         user: User = Depends(current_user),
 ):
-    new_donation = await donation_crud.create(donation, session, user)
-    new_donation = await investation(new_donation, CharityProject, session)
-    return new_donation
+    return await investation(await donation_crud.create(
+        donation, session, user), CharityProject, session)
 
 
 @router.get(
