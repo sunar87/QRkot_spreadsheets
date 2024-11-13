@@ -13,7 +13,7 @@ async def investation(
         session: AsyncSession,
 ) -> BaseModel:
     open_objs = await session.execute(select(opposing_model).where(
-        opposing_model.fully_invested == False  # noqa
+        opposing_model.fully_invested == False
     ).order_by(opposing_model.create_date))
     open_objs = open_objs.scalars().all()
     for obj in open_objs:

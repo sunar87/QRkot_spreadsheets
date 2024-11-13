@@ -1,4 +1,4 @@
-FORMAT = "%Y/%m/%d %H:%M:%S"
+FORMAT = '%Y/%m/%d %H:%M:%S'
 
 # Spreadsheet body
 SPREADSHEET_TITLE = 'Отчет от {}'
