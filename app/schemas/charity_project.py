@@ -12,14 +12,14 @@ MIN_DESCRIPTION_LENGTH = 1
 class CharityProjectBase(BaseModel):
     name: Optional[str] = Field(None, min_length=MIN_NAME_LENGTH,
                                 max_length=MAX_NAME_LENGTH)
-    description: Optional[str] = Field(None, min_length=1)
+    description: Optional[str] = Field(None, min_length=MIN_DESCRIPTION_LENGTH)
     full_amount: Optional[PositiveInt]
 
 
 class CharityProjectCreate(CharityProjectBase):
     name: str = Field(..., min_length=MIN_NAME_LENGTH,
                       max_length=MAX_NAME_LENGTH)
-    description: str = Field(..., min_length=1)
+    description: str = Field(..., min_length=MIN_DESCRIPTION_LENGTH)
     full_amount: PositiveInt
 
 
